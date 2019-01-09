@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MutatedObject';
+
+  config = {
+    position: 'top'
+  };
+
+  onClick() {
+    this.config.position = 'bottom';
+
+    // Change reference to object
+    // this.config = {
+    //   position: 'bottom'
+    // }
+  }
 }
