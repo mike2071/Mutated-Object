@@ -32,6 +32,15 @@ Run the project using ng serve.
 
 Once it is running open up the browser debugger and go to the console view.
 
+## Default Change Detection
 Click the "Trigger change detection" button and observe the output in the debugger window, also that "top" has changed to "bottom"
 
 You have just witnessed Angulars default change detection in action. Note that in the code we just set the property's value to a new string, Angular detected the change and updated the view for us.
+
+## OnPush Change Detection
+
+Firstly we need to go into the "tool-tip.component" and uncomment the "changeDetection" attribute in the "@Component" decorator, go back to browser, ( make sure you can see the console window in the dev tools ) click the "Trigger change detection" button again and note what happens... :)
+
+So, what did happen, hopefully nothing changed, simply put Angular is no longer comparing our properties, with the "onPush" strategy implemented we need to change the reference to our object, we can do this by passing our property a new object rather than changing the propery in the object we created.
+
+Comment out line sixteen and uncomment lines nineteen to twenty one, repeat the steps above and observe that the text is set to "bottom" again.
