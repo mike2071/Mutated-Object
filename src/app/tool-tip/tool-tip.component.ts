@@ -4,7 +4,7 @@ import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core
   selector: 'app-tool-tip',
   templateUrl: './tool-tip.component.html',
   styleUrls: ['./tool-tip.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ToolTipComponent implements OnInit {
 
